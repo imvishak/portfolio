@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import react from "react";
 import { motion } from "framer-motion";
 import { FaFilePdf } from "react-icons/fa6";

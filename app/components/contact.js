@@ -149,7 +149,7 @@ const PageContact = (props) => {
             </h2>
             <p className="cardo-regular text-xl ml-5 mt-5 inline-flex justify-start text-black">
               Looking to collaborate or grab a coffee and chat? Drop me a
-              message, and let's connect!
+              message.
             </p>
             <article className="mt-4  flex flex-row ">
               <ul className="flex flex-row text-black">
