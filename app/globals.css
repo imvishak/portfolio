@@ -1,0 +1,301 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cardo-regular {
+  font-family: var(--font-cardo);
+  font-style: normal;
+}
+
+.cardo-bold {
+  font-family: var(--font-cardo);
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cardo-regular-italic {
+  font-family: var(--font-cardo);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pacifico-regular {
+  font-family: var(--font-pacifico);
+  font-weight: 400;
+}
+
+@layer components {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
+  #client img,
+  #client svg {
+    width: 100px;
+    height: 100px;
+  }
+
+  #service img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+  }
+
+  .width-50 > article,
+  .width-50 > div {
+    width: 50%;
+  }
+
+  .width-100 > article,
+  .width-100 > div {
+    width: 100%;
+  }
+
+  .h-video {
+    object-fit: cover;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  .fixed-logo {
+    position: fixed;
+    top: 80%;
+    right: 3%;
+    z-index: 999;
+  }
+
+  .sticky {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .whatsapp-rotate {
+    animation: icon-rotate 4s both infinite;
+  }
+
+  .gmap {
+    width: 100%;
+    height: 200;
+  }
+
+  .feather {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+  }
+
+  .mobilenav {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    width: 0;
+    top: 0;
+    left: 0;  
+    overflow-x: hidden;
+  }
+
+  .regularnav {
+    height: auto;
+    position: relative;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+  }
+
+  .mobilenav a {
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .regularnav a {
+    display: inline-block;
+  }
+
+  a#menu-icon {
+    display: inline-block;
+    padding: 5px;
+  }
+  a#menu-icon .bar {
+    margin: 3px;
+    width: 25px;
+    height: 3px;
+    background: #F8512F;
+    border-radius: 1.5px;
+  }
+
+  a#menu-icon:not(.close):hover {
+    padding: 6px 10px;
+  }
+  a#menu-icon:not(.close):hover .bar {
+    margin: 5px 3px;
+  }
+
+  a#menu-icon .bar {
+    transition: margin 0.2s, transform 0.2s;
+    -webkit-transition: margin 0.2s, -webkit-transform 0.2s;
+    transition: margin 0.2s, -webkit-transform 0.2s;
+    -o-transition: margin 0.2s, transform 0.2s;
+    transition: margin 0.2s, transform 0.2s;
+    transition: margin 0.2s, transform 0.2s, -webkit-transform 0.2s;
+  }
+
+  a#menu-icon.close .bar:first-child {
+    -webkit-transform: translateY(6px) rotate(45deg);
+    -ms-transform: translateY(6px) rotate(45deg);
+    transform: translateY(6px) rotate(45deg);
+  }
+  a#menu-icon.close .bar:nth-child(2) {
+    opacity: 0;
+  }
+  a#menu-icon.close .bar:last-child {
+    -webkit-transform: translateY(-6px) rotate(-45deg);
+    -ms-transform: translateY(-6px) rotate(-45deg);
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .product-menu {
+    position: fixed;
+    background: rgb(23 83 140 / var(--tw-bg-opacity));
+    top: 90%;
+    padding: 12px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 50px;
+    font-size: 14px;
+    justify-content: space-around;
+    font-family: "Cardo";
+    font-weight: 200;
+    color: #ffffff;
+    align-items: center;
+  }
+
+  .active {
+    border-left: 3px solid rgb(13, 92, 39);
+    background-color: #3c7fb54f !important;
+  }
+
+  /* The Modal (background) */
+  .modal {    
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  .bar-container {
+    width: 150px;
+    margin-left: 5px;
+  }
+  
+  .progress-bar {
+    height: 4px;
+    background-color: rgba(5, 114, 206, 0.2);
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .progress-bar-value {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(5, 114, 206);
+    animation: indeterminateAnimation 1s infinite linear;
+    transform-origin: 0% 50%;
+  }
+
+  .circle-outer{
+    background: rgb(255 255 255 / 21%) ;
+    width: 60px;
+    position: relative;
+    border-radius: 50%;
+    height: 60px;
+  }
+
+  .circle-inner{
+    background: rgb(248 81 47 / 18%);
+    width: 45px;
+    position: absolute;
+    border-radius: 50%;
+    height: 45px;
+    top: 8px;
+    left: 8px;
+  }
+
+  .inner-child {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+  }
+  
+  @keyframes indeterminateAnimation {
+    0% {
+      transform:  translateX(0) scaleX(0);
+    }
+    40% {
+      transform:  translateX(0) scaleX(0.4);
+    }
+    100% {
+      transform:  translateX(100%) scaleX(0.5);
+    }
+  }
+
+  @keyframes icon-rotate {
+    0% {
+      transform: rotateY(0);
+    }
+    50% {
+      transform: rotateY(180deg);
+    }
+    100% {
+      transform: rotateY(0deg);
+    }
+  }
+}
